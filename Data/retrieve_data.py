@@ -9,14 +9,14 @@ with open('tokens.json', 'r') as f:
 
 def get_historical_data(symbol: str, interval: str, span: str, bounds: str):
     url = f"https://api.robinhood.com/marketdata/historicals/{symbol}/?interval={interval}&span={span}&bounds={bounds}"
-    headers = {"Authorization": bearer_token}
+    headers = {"Authorization": "Bearer "+bearer_token}
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         data = response.json()
         historical_data = data['historicals']
         for datapoint in historical_data:
             # save the json data to a file
-            with open('data.json', 'w') as outfile:
+            with open('Data/train_data.json', 'w') as outfile:
                 json.dump(datapoint, outfile)
             print(datapoint['begins_at'], datapoint['close_price'])
     else:

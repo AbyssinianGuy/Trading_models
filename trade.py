@@ -6,7 +6,7 @@ from Data import retrieve_data
 robinhood.login(credentials.username, credentials.password)
 
 # Get the current price of a stock
-symbol = 'AAPL'
+symbol = 'TSLA'
 interval = 'day'
 span = 'year'
 bounds = 'regular'
