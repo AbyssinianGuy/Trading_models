@@ -1,12 +1,11 @@
-import credentials
-import requests
+from user import credentials
 import json
 import robinhood as rb
 import os
 
 
 # create a class that logs in to the Robinhood API and stores the bearer token
-class login:
+class Login:
     def __init__(self):
         # get the bearer token
         cr = credentials.Credentials
@@ -31,6 +30,5 @@ class login:
         self.bearer_token = access_token
 
 
-# create an instance of login
-lg = login()
-lg.login(credentials.Credentials[0], credentials.Credentials[1])
+if "__name__" == "__main__":
+    pass

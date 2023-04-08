@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import json
 
-with open('Data/train_data.json', 'r') as f:
+with open('train_data.json', 'r') as f:
     data = json.load(f)
 
 # convert the data to a panads dataframe
