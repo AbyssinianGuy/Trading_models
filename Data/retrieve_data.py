@@ -37,7 +37,9 @@ class RetrieveData:
 if __name__ == "__main__":
     rd = RetrieveData()
     # open symbols.json and get the symbols
-    instruments = rb.get_all_instruments()
-    symbols = [instrument['symbol'] for instrument in instruments]
-    print(symbols)
+    # instruments = rb.get_all_instruments()
+    # symbols = [instrument['symbol'] for instrument in instruments]
+    # print(symbols)
             # rd.get_historical_data(symbol, 'day', 'year', 'regular')
+    # print the data
+    print(rd.get_historical_data('AAPL', 'day', 'year', 'regular'))
