@@ -30,5 +30,7 @@ class Login:
         self.bearer_token = access_token
 
 
-if "__name__" == "__main__":
-    pass
+if __name__ == "__main__":
+    l = Login()
+    l.login('username', 'password')
+    print(l.bearer_token)
