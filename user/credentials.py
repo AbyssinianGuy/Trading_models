@@ -1,5 +1,5 @@
 
-username = "michaelasfaw12@gmail.com"
-password = "Enat@132123"
+username = "<YOUR EMAIL>"
+password = "<YOUR PASSWORD>"
 
 Credentials = [username, password]
